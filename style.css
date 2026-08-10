@@ -1,27 +1,32 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial;background:#f4f4f4;color:#222;line-height:1.6}
-header{background:#111;color:white;padding:18px;text-align:center;position:sticky;top:0;z-index:5}
-header h1{margin-bottom:10px}
+body{font-family:Arial;background:#f3f3f3;color:#222;text-align:center}
+header{background:#171717;color:white;padding:20px;position:sticky;top:0;z-index:5}
+header h1{margin-bottom:12px}
 nav a{color:white;text-decoration:none;margin:8px;font-weight:bold}
-nav a:hover{color:#d69e2e}
+nav a:hover{color:#d8a300}
 main{max-width:1000px;margin:auto}
-section{padding:55px 25px;margin:20px 0;background:white;border-radius:15px}
-.hero{text-align:center}
-.hero h2{font-size:35px;color:#7b2cbf}
-.hero img{width:100%;max-height:350px;object-fit:cover;border-radius:15px;margin-top:20px}
-h2{color:#7b2cbf;margin-bottom:15px}
-h3{margin-top:20px}
-li{margin-left:25px}
-textarea{width:100%;height:150px;padding:12px;border:1px solid #aaa;border-radius:8px;margin:10px 0}
-button{background:#7b2cbf;color:white;border:0;padding:11px 18px;border-radius:7px;margin:5px;cursor:pointer}
+section{background:white;margin:25px;padding:45px 25px;border-radius:18px;box-shadow:0 5px 20px #ccc}
+.hero h2{font-size:36px;color:#7b2cbf;margin-bottom:15px}
+.hero p{font-size:18px;margin-bottom:25px}
+.hero img{display:block;width:80%;max-width:700px;height:350px;object-fit:cover;margin:20px auto;border-radius:18px}
+h2{color:#7b2cbf;margin-bottom:18px}
+h3{margin:20px}
+ul{list-style-position:inside}
+textarea{display:block;width:90%;max-width:700px;height:150px;margin:20px auto;padding:15px;border:2px solid #bbb;border-radius:10px;font-size:16px}
+button{background:#7b2cbf;color:white;border:0;padding:12px 22px;border-radius:8px;cursor:pointer;font-weight:bold}
 button:hover{background:#5a189a}
-#mensagem,#resultado{font-weight:bold;margin-top:15px}
-.pergunta{padding:15px;margin:12px 0;background:#eee;border-radius:8px}
-.pergunta label{display:block;margin:7px;cursor:pointer}
-body.escuro{background:#151515;color:#eee}
-body.escuro section{background:#252525}
+#mensagem,#resultado{margin-top:20px;font-weight:bold}
+.pergunta{background:#eee;max-width:700px;margin:15px auto;padding:18px;border-radius:10px;text-align:left}
+.pergunta label{display:block;margin:8px;cursor:pointer}
+#fontes a{display:block;color:#6a1b9a;margin:12px}
+#tema{position:fixed;right:20px;bottom:20px;border-radius:50%;font-size:20px}
+body.escuro{background:#111;color:white}
+body.escuro section{background:#222;box-shadow:none}
 body.escuro .pergunta{background:#333}
 body.escuro h2{color:#d8b4fe}
-#tema{position:fixed;right:20px;bottom:20px}
-@media(max-width:600px){header h1{font-size:22px}nav a{display:inline-block;font-size:13px}.hero h2{font-size:27px}section{padding:35px 18px}}
+@media(max-width:600px){
+header h1{font-size:23px}nav a{display:inline-block;font-size:13px}
+.hero h2{font-size:27px}.hero img{width:100%;height:250px}
+section{margin:15px;padding:35px 15px}
+}
