@@ -1,12 +1,39 @@
-package com.agrosoja;
+let pontos=0;
+let respondidas=[];
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+function tema(){
+ document.body.classList.toggle("escuro");
+}
 
-@SpringBootApplication
-public class AgroSojaApplication {
+function enviar(){
+ let texto=document.getElementById("desabafo").value;
+ let msg=document.getElementById("mensagem");
 
-    public static void main(String[] args) {
-        SpringApplication.run(AgroSojaApplication.class, args);
+ if(texto.trim()==""){
+  msg.innerHTML="Escreva algo antes de enviar.";
+ }else{
+  msg.innerHTML="💜 Obrigado por compartilhar. Procure um adulto de confiança se precisar de ajuda.";
+  document.getElementById("desabafo").value="";
+ }
+}
+
+function responder(pergunta,resposta){
+
+ if(respondidas.includes(pergunta)) return;
+
+ respondidas.push(pergunta);
+
+ if(pergunta==1 && resposta=="b") pontos++;
+ if(pergunta==2 && resposta=="b") pontos++;
+ if(pergunta==3 && resposta=="a") pontos++;
+
+ document.getElementById("resultado").innerHTML=
+ "Você acertou "+pontos+" de 3 perguntas.";
+
+ if(respondidas.length==3){
+  document.getElementById("resultado").innerHTML+=
+  "<br>🎉 Quiz concluído!";
+ }
+}
     }
 }

@@ -2,151 +2,70 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgroSoja Brasil</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
-}
-
-header{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-nav{
-    background:#2e7d32;
-    padding:10px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-}
-
-.container{
-    width:90%;
-    margin:auto;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-}
-
-input, select{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-}
-
-button{
-    background:#1b5e20;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-button:hover{
-    background:#145a18;
-}
-
-#resultado{
-    margin-top:15px;
-    font-weight:bold;
-    color:#1b5e20;
-}
-
-footer{
-    text-align:center;
-    background:#1b5e20;
-    color:white;
-    padding:15px;
-}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vozes pela Igualdade</title>
+<link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
 <header>
-    <h1>🌱 AgroSoja Brasil</h1>
-    <p>Compra, venda e comercialização de soja</p>
+<h1>✊ Vozes pela Igualdade</h1>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#racismo">Racismo</a>
+<a href="#escuta">Escuta</a>
+<a href="#quiz">Quiz</a>
+<a href="#fontes">Fontes</a>
+</nav>
 </header>
 
-<nav>
-    <a href="#cotacao">Cotação</a>
-    <a href="#vendas">Vendas</a>
-    <a href="#consulta">Consultas</a>
-</nav>
+<main>
+<section id="inicio" class="hero">
+<h2>Combater o racismo começa pelo respeito</h2>
+<p>Bem-vindo ao nosso portal escolar de conscientização contra o racismo.</p>
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Pessoas juntas">
+</section>
 
-<div class="container">
+<section id="racismo">
+<h2>O que é racismo?</h2>
+<p>Racismo é a discriminação ou preconceito baseado em raça, cor, etnia ou origem.</p>
+<p>Todos devem ser tratados com dignidade, respeito e igualdade.</p>
+<h3>Como combater?</h3>
+<ul><li>Respeite as diferenças.</li><li>Não aceite atitudes racistas.</li><li>Converse com um adulto de confiança.</li></ul>
+</section>
 
-    <div class="card" id="cotacao">
-        <h2>Cotação de Soja</h2>
+<section id="escuta">
+<h2>Portal de Escuta</h2>
+<p>Este formulário é apenas uma simulação. Nenhuma informação será armazenada.</p>
+<textarea id="desabafo" placeholder="Escreva seu desabafo..."></textarea>
+<button onclick="enviar()">Enviar</button>
+<p id="mensagem"></p>
+</section>
 
-        <select id="estado">
-            <option value="128">Paraná</option>
-            <option value="126">Mato Grosso</option>
-            <option value="130">Rio Grande do Sul</option>
-        </select>
+<section id="quiz">
+<h2>Quiz</h2>
+<p>1. Racismo é uma forma de:</p>
+<button onclick="responder(1,'a')">a) Respeito</button>
+<button onclick="responder(1,'b')">b) Discriminação</button>
+<button onclick="responder(1,'c')">c) Amizade</button>
+<p>2. Devemos respeitar:</p>
+<button onclick="responder(2,'a')">a) Apenas amigos</button>
+<button onclick="responder(2,'b')">b) Todas as pessoas</button>
+<p>3. Ao presenciar racismo devemos:</p>
+<button onclick="responder(3,'a')">a) Procurar ajuda</button>
+<button onclick="responder(3,'b')">b) Ignorar</button>
+<p id="resultado"></p>
+</section>
 
-        <button onclick="consultarPreco()">
-            Consultar Preço
-        </button>
+<section id="fontes">
+<h2>Referências</h2>
+<a href="https://www.planalto.gov.br/ccivil_03/leis/l7716.htm" target="_blank">Lei 7.716/1989</a><br>
+<a href="https://www.gov.br/igualdaderacial/" target="_blank">Ministério da Igualdade Racial</a><br>
+<a href="https://www.gov.br/saude/" target="_blank">Ministério da Saúde</a>
+</section>
+</main>
 
-        <div id="resultado"></div>
-    </div>
-
-    <div class="card" id="vendas">
-        <h2>Simulador de Venda</h2>
-
-        <label>Quantidade de Sacas</label>
-        <input type="number" id="sacas">
-
-        <button onclick="calcularVenda()">
-            Calcular Valor
-        </button>
-
-        <div id="valorVenda"></div>
-    </div>
-
-    <div class="card" id="consulta">
-        <h2>Solicitar Consulta Comercial</h2>
-
-        <input type="text" id="nome" placeholder="Nome">
-
-        <input type="email" id="email" placeholder="E-mail">
-
-        <button onclick="enviarConsulta()">
-            Enviar
-        </button>
-
-        <div id="mensagem"></div>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 AgroSoja Brasil
-</footer>
-
-<script>
-
-let precoAtual = 128;
-
+<button onclick="tema()">🌙 Modo escuro</button>
+<script src="script.js"></script>
 </body>
 </html>
