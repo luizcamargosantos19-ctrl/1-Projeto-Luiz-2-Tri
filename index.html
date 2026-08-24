@@ -7,54 +7,52 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<header>
-<h1>✊ Vozes pela Igualdade</h1>
-<nav>
-<a href="#inicio">Início</a><a href="#racismo">Racismo</a>
-<a href="#escuta">Escuta</a><a href="#quiz">Quiz</a><a href="#fontes">Fontes</a>
-</nav>
-</header>
+<header><h1>✊ Vozes pela Igualdade</h1>
+<nav><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#combate">Combate</a>
+<a href="#escuta">Escuta</a><a href="#quiz">Quiz</a><a href="#fontes">Fontes</a></nav></header>
+
+<img class="canto esquerda" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=300" alt="Estudantes">
+<img class="canto direita" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=300" alt="Amigos">
 
 <main>
 <section id="inicio" class="hero">
+<span>EDUCAÇÃO • RESPEITO • IGUALDADE</span>
 <h2>Combater o racismo começa pelo respeito</h2>
-<p>Um espaço escolar para aprender, refletir e valorizar a diversidade.</p>
-<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Grupo de pessoas unidas">
+<p>Informação, empatia e educação podem ajudar a construir uma sociedade mais justa.</p>
+<img class="principal" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1000" alt="Grupo diverso unido">
+<a class="botao" href="#sobre">Conheça o tema ↓</a>
 </section>
 
-<section id="racismo">
-<h2>O que é racismo?</h2>
-<p>Racismo é a discriminação ou preconceito relacionado à raça, cor, etnia ou origem.</p>
-<p>Todos têm direito à igualdade, dignidade e respeito.</p>
-<h3>Como combater?</h3>
-<ul><li>Respeite as diferenças.</li><li>Não aceite atitudes racistas.</li>
-<li>Procure um professor ou adulto de confiança.</li></ul>
-</section>
+<section id="sobre"><h2>📚 Entenda o racismo</h2>
+<p>Racismo é uma forma de discriminação ou preconceito relacionada à raça, cor, etnia ou origem.</p>
+<p>Ele pode aparecer em palavras, atitudes, exclusões, estereótipos e desigualdades.</p>
+<div class="cards"><article>🤝<h3>Respeito</h3><p>Todas as pessoas merecem dignidade.</p></article>
+<article>🌎<h3>Diversidade</h3><p>As diferenças fazem parte da sociedade.</p></article>
+<article>❤️<h3>Empatia</h3><p>Ouvir e acolher também é combater.</p></article></div></section>
 
-<section id="escuta">
-<h2>💜 Portal de Escuta</h2>
+<section id="combate" class="escuro"><h2>✊ Como combater?</h2>
+<div class="passos"><div><b>01</b><h3>Informe-se</h3><p>Busque conhecimento.</p></div>
+<div><b>02</b><h3>Respeite</h3><p>Valorize as diferenças.</p></div>
+<div><b>03</b><h3>Denuncie</h3><p>Procure ajuda responsável.</p></div>
+<div><b>04</b><h3>Acolha</h3><p>Apoie quem precisa.</p></div></div></section>
+
+<section id="escuta"><h2>💜 Portal de Escuta</h2>
 <p>Este formulário é apenas uma simulação. Nenhuma informação será armazenada.</p>
 <textarea id="desabafo" placeholder="Escreva seu desabafo..."></textarea>
-<button onclick="enviar()">Enviar</button>
-<p id="mensagem"></p>
-</section>
+<button class="botao" onclick="enviar()">Enviar desabafo</button><p id="mensagem"></p>
+<p>Se precisar de ajuda, converse com um professor, pedagogo, direção, familiar ou adulto de confiança.</p></section>
 
-<section id="quiz">
-<h2>🧠 Quiz sobre Racismo</h2>
-<div id="perguntas"></div>
-<button onclick="corrigir()">Finalizar Quiz</button>
-<p id="resultado"></p>
-</section>
+<section id="quiz"><h2>🧠 Quiz: Teste seus conhecimentos</h2>
+<div id="perguntas"></div><button class="botao" onclick="corrigir()">Finalizar Quiz</button>
+<p id="resultado"></p></section>
 
-<section id="fontes">
-<h2>📚 Referências</h2>
-<a href="https://www.planalto.gov.br/ccivil_03/leis/l7716.htm" target="_blank">Lei 7.716/1989</a>
+<section id="fontes"><h2>📖 Referências</h2>
+<a href="https://www.planalto.gov.br/ccivil_03/leis/l7716.htm" target="_blank">Lei nº 7.716/1989</a>
+<a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm" target="_blank">Lei nº 14.532/2023</a>
 <a href="https://www.gov.br/igualdaderacial/" target="_blank">Ministério da Igualdade Racial</a>
-<a href="https://www.gov.br/saude/" target="_blank">Ministério da Saúde</a>
-</section>
+<a href="https://www.gov.br/saude/" target="_blank">Ministério da Saúde</a></section>
 </main>
 
-<button id="tema" onclick="tema()">🌙</button>
+<button id="tema" onclick="tema()">🌙</button><button id="topo" onclick="topo()">↑</button>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
